@@ -44,7 +44,7 @@ export const getRecommendations = async (preference) => {
             {
               role: "system",
               content:
-                "You recommend the best products from a list. Return only product names separated by commas."
+                "Select top 3 best matching products from the list. Return only product names separated by commas"
             },
             {
               role: "user",
@@ -77,7 +77,28 @@ Return the best product names.
       aiNames.some((name) => product.name.toLowerCase().includes(name))
     );
 
-    return recommended;
+    const enrichedRecommendations = recommended.map((product) => {
+  let reasons = [];
+
+  if (budget && product.price <= budget) {
+    reasons.push("Fits your budget");
+  }
+
+  if (category && product.category.toLowerCase() === category) {
+    reasons.push(`Matches your interest in ${category}`);
+  }
+
+  if (product.rating && product.rating >= 4.5) {
+    reasons.push("Highly rated product");
+  }
+
+  return {
+    ...product,
+    reason: reasons.join(", ") || "Recommended based on your preference"
+  };
+});
+
+return enrichedRecommendations.slice(0, 3);
 
   } catch (error) {
     console.error(error);

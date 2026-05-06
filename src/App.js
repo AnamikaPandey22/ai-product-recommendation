@@ -20,7 +20,7 @@ function App() {
 
     try {
       const results = await getRecommendations(preference);
-      setRecommendedProducts(results);
+      setRecommendedProducts(results || []);
     } catch (err) {
       console.error(err);
       setError("Something went wrong while fetching recommendations.");
@@ -32,27 +32,27 @@ function App() {
   return (
     <div className="container">
 
-      <h1>AI Product Recommendation System</h1>
+      <h1>🤖 AI Product Recommendation System</h1>
 
       <PreferenceInput onSearch={handleSearch} />
 
+      {/* 🔹 Improved loading */}
       {loading && (
         <p className="loading">
-          AI is finding the best products for you...
+          🤖 Finding the best recommendations for you...
         </p>
       )}
 
+      {/* 🔹 Error */}
       {error && (
         <p className="error">
           {error}
         </p>
       )}
 
+      {/* 🔹 Results */}
       {searched && !loading && !error && (
-        <>
-          <h2>Recommended Products</h2>
-          <ProductList products={recommendedProducts} />
-        </>
+        <ProductList products={recommendedProducts} />
       )}
 
     </div>
