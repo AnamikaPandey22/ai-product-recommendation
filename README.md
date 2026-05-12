@@ -71,6 +71,8 @@ User accounts for personalized recommendations.
 
 Enhanced UI/UX with animations and transitions.
 
+Project live : [https://ai-product-recommendation-alpha.vercel.app/]
+
 📄 License
 
 This project is licensed under the MIT License.
