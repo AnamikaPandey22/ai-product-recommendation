@@ -5,7 +5,7 @@ A web-based product recommendation system built with React.js that suggests prod
 
 
 
-🔹 Features
+🔹 Features :-
 
 Interactive Preference Input: Users can select preferences for personalized product suggestions.
 
