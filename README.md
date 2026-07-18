@@ -15,7 +15,7 @@ Responsive Design: Works smoothly on desktop and mobile screens.
 
 Front-End Only: Lightweight, fast, and easy to deploy without a backend.
 
-🛠️ Tech Stack
+🛠️ Tech Stack :-
 
 React.js – Component-based UI
 
