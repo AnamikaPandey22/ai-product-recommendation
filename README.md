@@ -21,7 +21,7 @@
 
 ---
 
-## 🌟 Overview
+## 🌟 Overview -
 
 **AI-Based Product Recommender** is a lightweight, front-end driven web application designed to simplify product discovery.
 
@@ -31,7 +31,7 @@ Users select their preferences, and the application instantly displays products 
 
 ---
 
-## ✨ Features
+## ✨ Features -
 
 - 🎯 **Interactive Preferences** — Select product preferences through an intuitive UI.
 - ⚡ **Dynamic Recommendations** — Results update instantly based on user input.
