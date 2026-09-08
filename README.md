@@ -42,7 +42,7 @@ Users select their preferences, and the application instantly displays products 
 
 ---
 
-## 🧠 How It Works
+## 🧠 How It Works -
 
 ```text
 👤 User
